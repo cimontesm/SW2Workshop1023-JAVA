@@ -1,3 +1,4 @@
+package TallerCodingStandards;
 import java.util.*;
 
 class student {
