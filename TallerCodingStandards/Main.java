@@ -1,11 +1,10 @@
 package TallerCodingStandards;
-import java.util.*;
 
 public class Main {
  public static void main(String[] args){
- student s = new student("abc", null);
- s.AddG(100);
- s.AddG("Ninety");
+ Student s = new Student("abc", null);
+ s.addG(100);
+ s.addG(90);
  s.average();
  s.checkHonorStatus();
  s.removeGrade(9);

@@ -4,19 +4,20 @@ import java.util.*;
 class Student {
     String id;
     String name;
-    List gradez;
+    ArrayList<Double> gradez;
     String pass = "unknown";
     boolean honor;
 
-    public student(String i, String n) {
+    public Student(String i, String n) {
         id = i;
         name = n;
-        gradez = new ArrayList();
+        gradez = new ArrayList<Double>();
     }
 
-    public void addG(Double g) {
+    public void addG(double g) {
         gradez.add(g);
     }
+
 
     public double average() {
         double total = 0;
@@ -29,7 +30,7 @@ class Student {
 
     public void checkHonorStatus() {
         if (average() > 90) {
-            honor = "yes"; // Type mismatch (boolean vs String), kept broken
+            honor = true; // Type mismatch (boolean vs String), kept broken
         }
     }
 
@@ -38,10 +39,10 @@ class Student {
     }
 
     public void reportCard() {
-        java.util.logging.Logger("Student: " + name);
-        java.util.logging.Logger("ID: " + id);
-        java.util.logging.Logger("Grades #: " + gradez.size());
-        java.util.logging.Logger("Average: " + avg); 
-        java.util.logging.Logger("Honor Roll: " + honorRoll); 
+        System.out.println("Student: " + name);
+        System.out.println("ID: " + id);
+        System.out.println("Grades #: " + gradez.size());
+        System.out.println("Average: " + average()); 
+        System.out.println("Honor Roll: " + honor);
     }
 }
