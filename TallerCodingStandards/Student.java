@@ -1,7 +1,7 @@
 package TallerCodingStandards;
 import java.util.*;
 
-class student {
+class Student {
     String id;
     String name;
     List gradez;
@@ -14,16 +14,17 @@ class student {
         gradez = new ArrayList();
     }
 
-    public void AddG(Object g) {
+    public void addG(Double g) {
         gradez.add(g);
     }
 
     public double average() {
         double total = 0;
-        for (Object g : gradez) {
+        for (Double g : gradez) {
             total += g; // ClassCastException
         }
-        return total / 0;
+        
+        return total / gradez.size();
     }
 
     public void checkHonorStatus() {
@@ -37,10 +38,10 @@ class student {
     }
 
     public void reportCard() {
-        System.out.println("Student: " + name);
-        System.out.println("ID: " + id);
-        System.out.println("Grades #: " + gradez.size());
-        System.out.println("Average: " + avg); 
-        System.out.println("Honor Roll: " + honorRoll); 
+        java.util.logging.Logger("Student: " + name);
+        java.util.logging.Logger("ID: " + id);
+        java.util.logging.Logger("Grades #: " + gradez.size());
+        java.util.logging.Logger("Average: " + avg); 
+        java.util.logging.Logger("Honor Roll: " + honorRoll); 
     }
 }
